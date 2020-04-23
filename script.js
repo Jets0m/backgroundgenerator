@@ -28,8 +28,10 @@ function getRandomColor() {
 }
 
 function setRandomColor() {
-  body.style.background = "linear-gradient(to right, " + getRandomColor() + ", " + getRandomColor() + ")";
-  css.textContent = body.style.background;
+    color1.value = getRandomColor();
+    color2.value = getRandomColor();
+    setGradient();
 }
+
 
 randBtn.addEventListener("click", setRandomColor);
