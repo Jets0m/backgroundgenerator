@@ -9,14 +9,8 @@ var randBtn = document.querySelector("#random");
 function setGradient() {
   body.style.background = "linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 
-css.textContent = "background: linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
+  css.textContent = "background: linear-gradient(to right, " + color1.value + ", " + color2.value + ")";
 }
-
-
-color1.addEventListener("input", setGradient);
-
-color2.addEventListener("input", setGradient);
-
 
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
@@ -28,10 +22,14 @@ function getRandomColor() {
 }
 
 function setRandomColor() {
-    color1.value = getRandomColor();
-    color2.value = getRandomColor();
-    setGradient();
+  color1.value = getRandomColor();
+  color2.value = getRandomColor();
+  setGradient();
 }
+
+color1.addEventListener("input", setGradient);
+
+color2.addEventListener("input", setGradient);
 
 
 randBtn.addEventListener("click", setRandomColor);

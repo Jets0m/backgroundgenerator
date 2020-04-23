@@ -2,4 +2,13 @@ body {
   text-align: center;
   top: 15%;
   background: linear-gradient(to right, #f2ca0d, #0ef1f1);
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
